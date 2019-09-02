@@ -1,0 +1,38 @@
+<div class=hole><h3><%=image_tag ("res/f.svg")%>&nbsp;SR#</font><font color="Lightgreen">tech</font> Candidates</h3></div>
+<div class=i1><%=link_to "Log out", logout_path,method: :delete,class: "btn btn-primary" %></div>
+</br>
+</br>
+</br>
+<br>
+<%= image_tag ("res/hr.svg")%>
+<div class=indexline> 
+</font><font color=#B5B4B4>
+  <h3><p>“Nothing we do is more important than hiring and developing </p>
+  <p>  people. At the end of the day, you bet on people,</p>
+        <p>  not on strategies."</p></h3>
+      </div></font>
+<table class = "table table-bordered table-striped">
+   <thead>.
+      <tr>
+         <th>Name</th>
+         <th>Position</th>
+         <th>EmailId</th>
+         <th>Resume</th>
+        
+      </tr>
+   </thead>
+   
+   <tbody>
+      <%@resume.each do |resume| %>
+         <tr>
+              <td><%= resume.name %></td>
+             <td><%= resume.position %></td>
+              <td><%= resume.emailId %></td>
+            <td><%= link_to "View Resume", resume.attachment_url%></td>
+                
+         </tr>
+         
+      <% end %>
+   </tbody>
+   
+</table>

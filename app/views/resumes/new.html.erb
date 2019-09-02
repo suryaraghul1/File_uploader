@@ -1,0 +1,74 @@
+<div class=hole><h3><%=image_tag ("res/f.svg")%>&nbsp;SR#</font><font color="Lightgreen">tech</font> career</h3></div>
+<h4><div class=s><p><%=link_to"Home", class: "a-primary"%></p></div>
+<div class=s0><%=link_to"Product"%></div>
+<div class=s1><%=link_to"Career",new_resume_path%></div>
+<div class=s2><%=link_to "Recruiter",new_session_path%></div>
+<div class=s3><%=link_to"Contact"%></div>
+</h4>
+<br>
+<br>
+<div class=f><p><h2>Want to join us for a game?</h2></p></div> 
+<%=image_tag ("res/home-banner.svg")%>
+<br>
+<br
+<p><h3><center>Careers At SRtech</center></h3></p>
+<p><center>At SRtech, we pride ourselves on building powerful, sophisticated software that’s fun and easy to use. We<br>
+believe that customers are the foundation of a successful business and we want to enable every team to deliver<br> moments of wow to them.
+<br>
+<br>
+We are constantly on the lookout for smart people who are passionate about building great products, designing <br>great,experiences, building scalable platforms, and making customers happy. If this describes you, feel free to<br> take a look at our openings below and apply!
+</p>
+</center>
+<!--<div class="image"><%= image_tag ("res/r3.jpg")%></div>-->
+<div class = "yes">
+  <br>
+<p><h4>Submit Your Application</font></h4></p>
+<% if !flash[:notice].blank? %>
+   <div class = "alert alert-info">
+      <%= flash[:notice] %>
+   </div>
+<% end %>
+
+   <%=bootstrap_form_for @resume do |f| %>
+      <%= f.text_field :name ,label: "Name"%> 
+      <%= f.text_field :position ,label:"Position"%> 
+      <%= f.email_field :emailId ,label: "Email"%>
+      <%=  f.file_field :attachment, label:"Resume"%>
+      <%= f.submit "Submit Application", class: "btn btn-primary"%>
+   <% end %>
+   
+ </div>
+<div class="d">
+<h3><font color=#0C2875>Why Work Here?</font></h3></p>
+</div>
+
+   <div class="t">        
+           <p><h3><font color=#0C2875><%= image_tag ("res/environment.svg")%>&nbsp;Environment</p></font></h3>
+       
+    <br>
+              <p>We do our best work when the stress</p>
+              <p>is low,the surroundings are inspiring,</p>
+               <p> and hierarchy is flat.</p>
+          </div>
+
+   <div class="t1">      
+          
+         <p><h3><font color=#0C2875><%= image_tag ("res/the_team.svg")%>&nbsp;The Team   </p></font></h3>
+         <br>
+
+               <p>We’re big mix of engineers,</p>
+              <p>creatives, data nerds, and more,</p>
+                <p>You can find your place with us.</p>
+     
+    </div>
+   
+
+    <div class="t2">    
+                  <p><h3><font color=#0C2875><%= image_tag ("res/learn.svg")%>&nbsp;Learn</font></h3> </p> 
+                  <br>
+
+                <p> Don’t just work harder, </p>
+                <p> learn and share how become a </p>
+                <p> master craftsman at your art. </p>
+
+       </div>      

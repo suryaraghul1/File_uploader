@@ -1,0 +1,30 @@
+
+<div class=hole><h3><%=image_tag ("res/f.svg")%>&nbsp;SR#</font><font color="Lightgreen">tech</font> Recruiter</h3></div>
+<h4><div class=s><p><%=link_to"Home", class: "a-primary"%></p></div>
+<div class=s0><%=link_to"Product"%></div>
+<div class=s1><%=link_to"Career",new_resume_path%></div>
+<div class=s2><%=link_to "Recruiter",new_session_path%></div>
+<div class=s3><%=link_to"Contact"%></div>
+</h4>
+
+<br>
+<br>
+<br>
+<%= image_tag ("res/hr1.svg")%>
+
+<font color=""><h4><center><p>““We believe in equal pay for equal work. Gender,</p> 
+<p>race, skin colour, or ethnicity should not be the parameters to </p>
+<p>hire someone or to decide how much they should be paid.””</p></center>
+</h4></font>
+<div class=new>
+<h1>Login</h1>
+<p id=”alert”><%= alert %></p>
+<%=form_tag sessions_path do |f|%>
+     <p>Email</p>
+    <%= text_field_tag :email,"", class: 'form-control'%>
+    <p>Password</p>
+    <%=password_field_tag :password ,"", class: 'form-control'  %>
+    <br>
+    <%=submit_tag :'Login', class: "btn btn-primary" %>
+  <% end %>
+  </div>
