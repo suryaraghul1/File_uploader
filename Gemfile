@@ -41,6 +41,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+ gem 'sqlite3'
 gem 'yarn'
 gem 'nokogiri'
 gem 'rack', '~> 2.0.1'
