@@ -1,0 +1,19 @@
+<h2> File Uploader</h2>
+<br>
+<% if !@creater.errors.empty? %>
+   <div class = "alert alert-error">
+      
+      <ul>
+         <% @resume.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+         <% end %>
+      </ul>
+      
+   </div>
+<% end %>
+
+   <%=bootstrap_form_for @creater, html: { multipart: true } do |f| %>
+      <%= f.text_field :name,label: "name"  %>
+      <%= f.file_field :attachment,label:"attachment" %>
+      <%= f.submit "Save", class: "btn btn-primary" %>
+   <% end %>
